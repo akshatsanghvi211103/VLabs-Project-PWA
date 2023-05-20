@@ -1,0 +1,29 @@
+---
+import * as React from "react";
+import * as ReactDOM from "react-dom/client";
+import { StyledEngineProvider } from "@mui/joy/styles";
+import App from "../components/App";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="theme-color" content="#000000" />
+
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <title>Virtual Experiments</title>
+  </head>
+  <body>
+    <React.StrictMode client:load>
+      <StyledEngineProvider injectFirst client:load>
+        <App client:load />
+      </StyledEngineProvider>
+    </React.StrictMode>
+  </body>
+</html>
